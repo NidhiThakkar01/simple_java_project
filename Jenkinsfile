@@ -1,14 +1,6 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM('* * * * *')
-    }
     stages {
-        stage('Checkout') {
-            steps {
-                git(url: "https://github.com/NidhiThakkar01/simple_java_project", branch: "master")
-            }
-        }
         stage('Build Project') {
             steps {
                 withMaven(
