@@ -19,4 +19,5 @@ pipeline {
         success{
             archiveArtifacts artifacts:'**/target/.*.jar', allowEmptyArchive: true
         }
+    }
 }
